@@ -1,3 +1,6 @@
+import { UserId } from '../users/types';
+import { WishReactionCounts } from '../reactions/types';
+
 export type WishCategory =
     | "love"
     | "happiness"
@@ -20,6 +23,7 @@ export type Wish = {
     text: string;
     category: WishCategory;
     postedAt: Date;
-    userId: number;
+    userId: UserId;
     isPrivate: boolean;
+    reactionCounts: WishReactionCounts;
 };
